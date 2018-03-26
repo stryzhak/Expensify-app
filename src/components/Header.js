@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import ExpenseDashboard from './ExpenseDashboardPage';
 const Header = () => (
     <header>
@@ -8,6 +8,6 @@ const Header = () => (
         <NavLink to="/create" activeClassName="is-active">Create expense</NavLink>
         <NavLink to="/help" activeClassName="is-active">Help page</NavLink>
     </header>
-   
+
 )
 export default Header;

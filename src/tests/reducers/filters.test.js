@@ -2,7 +2,7 @@ import filterReducer from '../../reducers/filters';
 import moment from 'moment'
 
 test('should setup default filter value', () => {
-    const state = filterReducer(undefined, { type: '@@INIT'});
+    const state = filterReducer(undefined, { type: '@@INIT' });
     expect(state).toEqual({
         text: '',
         sortBy: 'date',
@@ -12,20 +12,20 @@ test('should setup default filter value', () => {
 });
 
 test('should set sortBy to amount', () => {
-    const state = filterReducer(undefined, { type: 'SORT_BY_AMOUNT'});
+    const state = filterReducer(undefined, { type: 'SORT_BY_AMOUNT' });
     expect(state.sortBy).toBe('amount');
 });
 
 test('should set sortBy to date', () => {
-  const currentState = {
-    text: '',
-    startDate: undefined,
-    endDate: undefined,
-    sortBy: 'amount'
-  };
-  const action = {type: 'SORT_BY_DATE'};
-  const state = filterReducer(currentState, action);
-  expect(state.sortBy).toBe('date');
+    const currentState = {
+        text: '',
+        startDate: undefined,
+        endDate: undefined,
+        sortBy: 'amount'
+    };
+    const action = { type: 'SORT_BY_DATE' };
+    const state = filterReducer(currentState, action);
+    expect(state.sortBy).toBe('date');
 });
 
 test('should set text filter', () => {
